@@ -1,0 +1,26 @@
+<!--components/game/game.wxml-->
+<text>components/game/game.wxml</text>
+<view class="game">
+
+  <view class="game-board">
+    <board
+      bind:squaretap="handleSquareTap"
+      squares="{{squares}}"
+    />
+  </view>
+  <view class="game-info">
+    <view>{{switchState}}</view>
+    <view>{{status}}</view>
+    <block 
+      wx:for="{{moveDescs}}"
+      wx:key="*this"
+      >
+      <button 
+        bindtap="jumpTo"
+        data-step="{{index}}"
+        >
+        {{item}}
+      </button>
+    </block>
+  </view>
+</view>

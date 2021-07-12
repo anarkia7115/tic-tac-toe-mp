@@ -1,0 +1,31 @@
+<!--components/board/board.wxml-->
+<text>components/board/board.wxml</text>
+<view>
+  <view class="board-row">
+    <block wx:for="{{[0,1,2]}}" wx:key="*this">
+      <square 
+        value="{{squares[item]}}"
+        bind:squaretap="handleSquareTap"
+        data-squareid="{{item}}">
+      </square>
+    </block>
+  </view>
+  <view class="board-row">
+    <block wx:for="{{[3,4,5]}}" wx:key="*this">
+      <square 
+        value="{{squares[item]}}"
+        bind:squaretap="handleSquareTap"
+        data-squareid="{{item}}">
+      </square>
+    </block>
+  </view>
+  <view class="board-row">
+    <block wx:for="{{[6,7,8]}}" wx:key="*this">
+      <square 
+        value="{{squares[item]}}"
+        bind:squaretap="handleSquareTap"
+        data-squareid="{{item}}">
+      </square>
+    </block>
+  </view>
+</view>

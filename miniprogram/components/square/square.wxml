@@ -1,0 +1,4 @@
+<!--components/square/square.wxml-->
+<button class="square" bind:tap="handleTap">
+  {{value}}
+</button>
